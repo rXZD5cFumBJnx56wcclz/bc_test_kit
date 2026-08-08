@@ -2,8 +2,8 @@ use crate::settings::prelude::*;
 
 // these settings need to be checked:
 // - one of the kvargs
-// - source usage
-// - ind buffer usage
+// - src usage
+// - ind usage
 // - procedure_used
 pub static INDICATIONS: LazyLock<SETTINGS_INDS> = LazyLock::new(|| {
     SETTINGS_INDS::from_iter([
@@ -23,7 +23,7 @@ pub static INDICATIONS: LazyLock<SETTINGS_INDS> = LazyLock::new(|| {
             "sma_1".to_string(),
             SETTINGS_IND {
                 key: "sma".to_string(),
-                kwargs_usize: MAP::from_iter([("window".to_string(), 14)]),
+                kwargs_usize: MAP::from_iter([("window".to_string(), 3)]),
                 used_src: vec![
                     // fake
                     SETTINGS_USED_USIZE {
